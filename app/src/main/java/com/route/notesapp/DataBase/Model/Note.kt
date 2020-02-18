@@ -12,11 +12,11 @@ import androidx.room.PrimaryKey
 @Entity
 data class Note(
     @ColumnInfo
-    val title:String,
+    var title:String,
     @ColumnInfo
-    val description:String,
+    var description:String,
     @ColumnInfo
-    val time:String){
+    var time:String){
     @PrimaryKey(autoGenerate = true)
     var id:Int?=null
 }

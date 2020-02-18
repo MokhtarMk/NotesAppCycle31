@@ -26,4 +26,7 @@ interface NotesDao {
     @Query("select * from Note Where description like :word")
     fun searchNotesByDescription(word:String):List<Note>
 
+    @Query("select * from Note where id = :id")
+    fun searchNoteById(id: Int): Note
+
 }

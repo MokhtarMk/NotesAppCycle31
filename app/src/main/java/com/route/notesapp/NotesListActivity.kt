@@ -40,6 +40,18 @@ class NotesListActivity : AppCompatActivity() {
 
         }
 
+        notesAdapter.onItemClickListener=
+            object : NotesAdapter.OnItemClickListener{
+                override fun onItemClick(position: Int, note: Note?) {
+                        val intent = Intent(this@NotesListActivity,UpdateActivity::class.java)
+
+                        intent.putExtra("note", note?.id)
+                        startActivity(intent)
+
+                }
+            }
+
+
     }
 
     override fun onStart() {

@@ -32,6 +32,10 @@ class NotesAdapter(var notes:MutableList<Note>?):
         val note = notes?.get(position)
         holder.title.setText(note?.title)
         holder.date.setText(note?.time)
+
+        holder.itemView.setOnClickListener {
+            onItemClickListener.onItemClick(position, note)
+        }
     }
 
     fun changeData(list: List<Note>?){
@@ -58,6 +62,12 @@ class NotesAdapter(var notes:MutableList<Note>?):
 
     fun getRecentlyDeletedItem(): Note?{
         return recentlyDeletedItem
+    }
+
+    lateinit var onItemClickListener:OnItemClickListener
+
+    interface OnItemClickListener{
+        fun onItemClick(position: Int,note: Note?)
     }
 
     class ViewHolder(view:View):RecyclerView.ViewHolder(view){
