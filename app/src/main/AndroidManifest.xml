@@ -12,7 +12,7 @@
         <activity android:name=".AddNoteActivity"></activity>
         <activity
             android:name=".NotesListActivity"
-            android:label="@string/title_activity_notes_list"
+            android:label="@string/app_title"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

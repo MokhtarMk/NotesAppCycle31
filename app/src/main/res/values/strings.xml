@@ -3,4 +3,9 @@
     <string name="title_activity_notes_list">NotesListActivity</string>
     <string name="note_created_successfully">Note created successfully</string>
     <string name="ok">ok</string>
+    <string name="app_title">Note App</string>
+    <string name="description">description</string>
+    <string name="title">title</string>
+    <string name="add">Add</string>
+    <string name="date">date</string>
 </resources>
