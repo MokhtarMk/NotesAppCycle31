@@ -42,7 +42,7 @@ class UpdateActivity : AppCompatActivity() {
 
     fun showSuccessMessage() {
         val builder = AlertDialog.Builder(this);
-        builder.setMessage("Note updated successfully")
+        builder.setMessage("Note updated successfully :)")
         builder.setPositiveButton("Ok", { dialogInterface, i ->
             dialogInterface.dismiss()
             finish()
